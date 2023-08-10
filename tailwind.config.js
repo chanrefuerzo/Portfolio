@@ -1,5 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  rules: {
+    // Disable the react/no-unescaped-entities rule
+    "react/no-unescaped-entities": "off",
+    // ... other rules
+  },
   darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
