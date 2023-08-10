@@ -71,8 +71,13 @@ export default function Home() {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <Image src={Chan} className="object-cover" layout="fill" />
-              <Image src={blob} />
+              <Image
+                src={Chan}
+                className="object-cover"
+                layout="fill"
+                alt="main picture"
+              />
+              <Image src={blob} alt="main blob" />
             </motion.div>
             <div className=" ">
               <motion.div
@@ -139,7 +144,11 @@ export default function Home() {
                     transition={{ duration: 1, type: "spring", bounce: 0.4 }}
                     className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
                   >
-                    <Image src={reactLogo} className="w-10 h-10 " />
+                    <Image
+                      src={reactLogo}
+                      className="w-10 h-10 "
+                      alt="react logo"
+                    />
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, y: -50 }}
@@ -147,7 +156,11 @@ export default function Home() {
                     transition={{ duration: 1.3, type: "spring", bounce: 0.4 }}
                     className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
                   >
-                    <Image src={vueLogo} className="w-10 h-10  " />
+                    <Image
+                      src={vueLogo}
+                      className="w-10 h-10   "
+                      alt="vue logo"
+                    />
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, y: -50 }}
@@ -155,7 +168,11 @@ export default function Home() {
                     transition={{ duration: 1.6, type: "spring", bounce: 0.4 }}
                     className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
                   >
-                    <Image src={tailwindLogo} className="w-10 h-10 " />
+                    <Image
+                      src={tailwindLogo}
+                      className="w-10 h-10 "
+                      alt="tailwind logo"
+                    />
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, y: -50 }}
@@ -163,7 +180,11 @@ export default function Home() {
                     transition={{ duration: 1.9, type: "spring", bounce: 0.4 }}
                     className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
                   >
-                    <Image src={muiLogo} className="w-10 h-10 " />
+                    <Image
+                      src={muiLogo}
+                      className="w-10 h-10 "
+                      alt="mui logo"
+                    />
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, y: -50 }}
@@ -171,7 +192,11 @@ export default function Home() {
                     transition={{ duration: 2.1, type: "spring", bounce: 0.4 }}
                     className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
                   >
-                    <Image src={antDLogo} className="w-10 h-10 " />
+                    <Image
+                      src={antDLogo}
+                      className="w-10 h-10 "
+                      alt="antd logo"
+                    />
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, y: -50 }}
@@ -179,7 +204,11 @@ export default function Home() {
                     transition={{ duration: 2.4, type: "spring", bounce: 0.4 }}
                     className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
                   >
-                    <Image src={sassLogo} className="w-10 h-10 " />
+                    <Image
+                      src={sassLogo}
+                      className="w-10 h-10 "
+                      alt="sass logo"
+                    />
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, y: -50 }}
@@ -187,7 +216,11 @@ export default function Home() {
                     transition={{ duration: 2.7, type: "spring", bounce: 0.4 }}
                     className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
                   >
-                    <Image src={styledLogo} className="w-10 h-10 " />
+                    <Image
+                      src={styledLogo}
+                      className="w-10 h-10 "
+                      alt="styled logo"
+                    />
                   </motion.div>
                 </div>
               </div>
