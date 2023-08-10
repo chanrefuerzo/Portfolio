@@ -1,113 +1,295 @@
-import Image from 'next/image'
+"use client";
+import Image from "next/image";
+import { motion, useScroll } from "framer-motion";
+import { BsFillMoonStarsFill } from "react-icons/bs";
+import { AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
+import Chan from "../public/chan.png";
+import gym from "../public/gym.png";
+import wedding from "../public/wedding.png";
+import His from "../public/his.png";
+import Hollistic from "../public/Hollistic.png";
+import web5 from "../public/web5.png";
+import web6 from "../public/web6.png";
+import blob from "../public/blob.svg";
+import reactLogo from "../public/reactLogo.png";
+import vueLogo from "../public/vueLogo.png";
+import tailwindLogo from "../public/tailwindLogo.png";
+import muiLogo from "../public/Mui.png";
+import styledLogo from "../public/styled.png";
+import sassLogo from "../public/sass.png";
+import antDLogo from "../public/antD.png";
+import avatar from "../public/avatar.png";
+import { useState } from "react";
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className={darkMode ? "dark" : ""}>
+      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900 ">
+        <section className="">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: 20 },
+              visible: { opacity: 1, x: 0 },
+            }}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+            <nav className=" py-10 mb-12 flex justify-end">
+              <ul className="flex items-center gap-4 ">
+                <li>
+                  <BsFillMoonStarsFill
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="cursor-pointer text-2xl dark:text-slate-400"
+                  />
+                </li>
+                <li>
+                  <a
+                    className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+                    href="https://drive.google.com/file/d/17I_YyrjOgndkKQjFJR-IgD32sYP_tJmq/view?usp=drive_link"
+                    target="_blank"
+                  >
+                    Resume
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </motion.div>
+        </section>
+        <section className=" min-h-screen ">
+          <div className="flex-none justify-center items-center sm:flex">
+            <motion.div
+              className=" relative rounded-full overflow-hidden mt-20 md:h-96 md:w-96    "
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, x: 0 },
+                visible: { opacity: 1, x: 0 },
+              }}
+            >
+              <Image src={Chan} className="object-cover" layout="fill" />
+              <Image src={blob} />
+            </motion.div>
+            <div className=" ">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ delay: 0, duration: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: 20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                <h2 className="text-3xl sm:text-5xl py-2 text-teal-600 font-medium text-center sm:text-left">
+                  Front-End Developer
+                </h2>
+              </motion.div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: 20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+                <p className="sm:text-md text-center py-5 leading-8 text-gray-800 md:text-xl  mx-auto dark:text-gray-300">
+                  Hi, I'm Christian Jan Refuerzo, React Front-End Developer
+                  based on Philippines.
+                </p>
+              </motion.div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+              <div className=" flex-wrap sm:flex gap-2 ">
+                <div className="  gap-2 text-gray-600 flex justify-center">
+                  <motion.div
+                    className="flex gap-2"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0 }}
+                    animate={{ rotate: 360, scale: 1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 20,
+                    }}
+                    variants={{
+                      hidden: { opacity: 0 },
+                      visible: { opacity: 1 },
+                    }}
+                  >
+                    <AiFillFacebook className="w-8 h-8 sm:w-10 sm:h-10 " />
+                    <AiFillLinkedin className="w-8 h-8 sm:w-10 sm:h-10" />
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+                    <h3 className="text-3xl sm:flex justify-center hidden ">
+                      |
+                    </h3>
+                  </motion.div>
+                </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+                <div className="  flex gap-4 -mt-0 sm:-mt-2 justify-center items-center">
+                  <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, type: "spring", bounce: 0.4 }}
+                    className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
+                  >
+                    <Image src={reactLogo} className="w-10 h-10 " />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.3, type: "spring", bounce: 0.4 }}
+                    className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
+                  >
+                    <Image src={vueLogo} className="w-10 h-10  " />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.6, type: "spring", bounce: 0.4 }}
+                    className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
+                  >
+                    <Image src={tailwindLogo} className="w-10 h-10 " />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.9, type: "spring", bounce: 0.4 }}
+                    className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
+                  >
+                    <Image src={muiLogo} className="w-10 h-10 " />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2.1, type: "spring", bounce: 0.4 }}
+                    className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
+                  >
+                    <Image src={antDLogo} className="w-10 h-10 " />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2.4, type: "spring", bounce: 0.4 }}
+                    className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
+                  >
+                    <Image src={sassLogo} className="w-10 h-10 " />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2.7, type: "spring", bounce: 0.4 }}
+                    className=" bg-white shadow-xl rounded-full  p-2 cursor-pointer dark:bg-gray-400 "
+                  >
+                    <Image src={styledLogo} className="w-10 h-10 " />
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="min-h-screen">
+          <div className="flex flex-col  py-10 lg:flex-row lg:flex-wrap  items-center  justify-center text-center sm:text-left">
+            <div className="flex-1  flex justify-center pb-10 sm:pb-0 ">
+              <Image src={avatar} className="w-96 " />
+            </div>
+            <div className="basis-1/3 flex-1 px-10  ">
+              <h3 className="text-sm font-bold py-1 dark:text-red-900">
+                ABOUT ME
+              </h3>
+              <h2 className="text-3xl py-1 dark:text-teal-500">
+                Front-End Developer based in Davao City, Philippines
+              </h2>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+              <p className="text-md  leading-8 text-gray-800   dark:text-gray-300 ">
+                Hello, I'm Christian Jan Refuerzo, a front-end developer with 4
+                years of experience. I've spent a{" "}
+                <span className="text-teal-500"> year </span> working with a
+                <span className="text-teal-500"> start-up company </span> and
+                another <span className="text-teal-500"> 3 years </span> in the{" "}
+                <span className="text-teal-500"> Government </span> sector I
+                mainly work with JavaScript and
+                <span className="text-teal-500"> React.js </span> as my primary
+                language and framework. However, I have also gained experience
+                with
+                <span className="text-teal-500"> Vue.js </span> through one of
+                my part-time projects, and I have some knowledge of TypeScript.
+                For styling, I use{" "}
+                <span className="text-teal-500">
+                  Sass, Tailwind CSS, Ant Design, Material-UI, and Styled
+                  Components
+                </span>
+                . and currently im exploring nextjs
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className=" min-h-screen py-10">
+          <h3 className="text-3xl py-10 dark:text-teal-500">Portfolio</h3>
+          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+            <div className="basis-1/3 flex-1 ">
+              <Image
+                src={gym}
+                className="rounded-lg object-cover"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+            <div className="basis-1/3 flex-1 ">
+              <Image
+                src={wedding}
+                className="rounded-lg object-cover"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+            <div className="basis-1/3 flex-1 ">
+              <Image
+                src={His}
+                className="rounded-lg object-cover"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+            <div className="basis-1/3 flex-1 ">
+              <Image
+                src={Hollistic}
+                className="rounded-lg object-cover"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+            <div className="basis-1/3 flex-1 ">
+              <Image
+                src={web5}
+                className="rounded-lg object-cover"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+            <div className="basis-1/3 flex-1 ">
+              <Image
+                src={web6}
+                className="rounded-lg object-cover"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 }
