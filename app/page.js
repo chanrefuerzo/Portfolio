@@ -230,7 +230,7 @@ export default function Home() {
         <section className="min-h-screen">
           <div className="flex flex-col  py-10 lg:flex-row lg:flex-wrap  items-center  justify-center text-center sm:text-left">
             <div className="flex-1  flex justify-center pb-10 sm:pb-0 ">
-              <Image src={avatar} className="w-96 " />
+              <Image src={avatar} className="w-96 " alt="avatar logo" />
             </div>
             <div className="basis-1/3 flex-1 px-10  ">
               <h3 className="text-sm font-bold py-1 dark:text-red-900">
@@ -273,6 +273,7 @@ export default function Home() {
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
+                alt="gym thumbnail"
               />
             </div>
             <div className="basis-1/3 flex-1 ">
@@ -282,6 +283,7 @@ export default function Home() {
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
+                alt="wedding thumbnail"
               />
             </div>
             <div className="basis-1/3 flex-1 ">
@@ -291,6 +293,7 @@ export default function Home() {
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
+                alt="HIS thumbnail"
               />
             </div>
             <div className="basis-1/3 flex-1 ">
@@ -300,6 +303,7 @@ export default function Home() {
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
+                alt="Hollistic thumbnail"
               />
             </div>
             <div className="basis-1/3 flex-1 ">
@@ -309,6 +313,7 @@ export default function Home() {
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
+                alt="sample thumbnail"
               />
             </div>
             <div className="basis-1/3 flex-1 ">
@@ -318,6 +323,7 @@ export default function Home() {
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
+                alt="sample thumbnail"
               />
             </div>
           </div>
