@@ -8,8 +8,8 @@ import gym from "../public/gym.png";
 import wedding from "../public/wedding.png";
 import His from "../public/his.png";
 import Hollistic from "../public/Hollistic.png";
-import web5 from "../public/web5.png";
-import web6 from "../public/web6.png";
+import ulrp from "../public/ulrp.png";
+import cpdo from "../public/cpdo.png";
 import blob from "../public/blob.svg";
 import reactLogo from "../public/reactLogo.png";
 import vueLogo from "../public/vueLogo.png";
@@ -308,7 +308,7 @@ export default function Home() {
             </div>
             <div className="basis-1/3 flex-1 ">
               <Image
-                src={web5}
+                src={cpdo}
                 className="rounded-lg object-cover"
                 width={"100%"}
                 height={"100%"}
@@ -318,7 +318,7 @@ export default function Home() {
             </div>
             <div className="basis-1/3 flex-1 ">
               <Image
-                src={web6}
+                src={ulrp}
                 className="rounded-lg object-cover"
                 width={"100%"}
                 height={"100%"}
