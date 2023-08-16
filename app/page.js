@@ -3,6 +3,9 @@ import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
+import { FiGithub } from "react-icons/fi";
+import { RiLiveLine } from "react-icons/ri";
+
 import Chan from "../public/chan.png";
 import gym from "../public/gym.png";
 import wedding from "../public/wedding.png";
@@ -20,7 +23,6 @@ import sassLogo from "../public/sass.png";
 import antDLogo from "../public/antD.png";
 import avatar from "../public/avatar.png";
 import { useState } from "react";
-
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   return (
@@ -128,8 +130,19 @@ export default function Home() {
                       visible: { opacity: 1 },
                     }}
                   >
-                    <AiFillFacebook className="w-8 h-8 sm:w-10 sm:h-10 " />
-                    <AiFillLinkedin className="w-8 h-8 sm:w-10 sm:h-10" />
+                    <a
+                      href="https://www.facebook.com/chan.refuerzo/"
+                      target="_blank"
+                    >
+                      {" "}
+                      <AiFillFacebook className="w-8 h-8 sm:w-10 sm:h-10 " />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/christian-jan-refuerzo-a0159116a/"
+                      target="_blank"
+                    >
+                      <AiFillLinkedin className="w-8 h-8 sm:w-10 sm:h-10" />
+                    </a>
 
                     <h3 className="text-3xl sm:flex justify-center hidden ">
                       |
@@ -266,25 +279,66 @@ export default function Home() {
         <section className=" min-h-screen py-10">
           <h3 className="text-3xl py-10 dark:text-teal-500">Portfolio</h3>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1 ">
-              <Image
-                src={gym}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="gym thumbnail"
-              />
+            <div className="relative basis-1/3 flex-1 group">
+              <div className="rounded-lg overflow-hidden group-hover:blur">
+                <Image
+                  src={gym}
+                  className="object-cover"
+                  width={"100%"}
+                  height={"100%"}
+                  layout="responsive"
+                  alt="gym thumbnail"
+                />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10 gap-2">
+                <a
+                  href="https://github.com/chanrefuerzo/SinglePageResponsive"
+                  target="_blank"
+                >
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500  text-white px-4 py-2 rounded-md flex gap-2">
+                    <FiGithub className="text-3xl" />
+                    <span className="mt-1">GitHub</span>
+                  </button>
+                </a>
+                <a href="https://kantogym.vercel.app/" target="_blank">
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500  text-white px-4 py-2 rounded-md flex gap-2">
+                    <RiLiveLine className="text-3xl" />
+                    <span className="mt-1">Live</span>
+                  </button>
+                </a>
+              </div>
             </div>
-            <div className="basis-1/3 flex-1 ">
-              <Image
-                src={wedding}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="wedding thumbnail"
-              />
+            <div className="relative basis-1/3 flex-1 group">
+              <div className="rounded-lg overflow-hidden group-hover:blur">
+                <Image
+                  src={wedding}
+                  className="object-cover"
+                  width={"100%"}
+                  height={"100%"}
+                  layout="responsive"
+                  alt="wedding thumbnail"
+                />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10 gap-2">
+                <a
+                  href="https://github.com/chanrefuerzo/WeddingSinglePage"
+                  target="_blank"
+                >
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500  text-white px-4 py-2 rounded-md flex gap-2">
+                    <FiGithub className="text-3xl" />
+                    <span className="mt-1">GitHub</span>
+                  </button>
+                </a>
+                <a
+                  href="https://wedding-single-page.vercel.app/"
+                  target="_blank"
+                >
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500  text-white px-4 py-2 rounded-md flex gap-2">
+                    <RiLiveLine className="text-3xl" />
+                    <span className="mt-1">Live</span>
+                  </button>
+                </a>
+              </div>
             </div>
             <div className="basis-1/3 flex-1 ">
               <Image
@@ -296,25 +350,63 @@ export default function Home() {
                 alt="HIS thumbnail"
               />
             </div>
-            <div className="basis-1/3 flex-1 ">
-              <Image
-                src={Hollistic}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Hollistic thumbnail"
-              />
+            <div className="relative basis-1/3 flex-1 group">
+              <div className="rounded-lg overflow-hidden group-hover:blur">
+                <Image
+                  src={Hollistic}
+                  className="object-cover"
+                  width={"100%"}
+                  height={"100%"}
+                  layout="responsive"
+                  alt="wedding thumbnail"
+                />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10 gap-2">
+                <a
+                  href="https://github.com/chanrefuerzo/Holistic"
+                  target="_blank"
+                >
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500  text-white px-4 py-2 rounded-md flex gap-2">
+                    <FiGithub className="text-3xl" />
+                    <span className="mt-1">GitHub</span>
+                  </button>
+                </a>
+                <a href="https://holistic-xi.vercel.app/" target="_blank">
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500  text-white px-4 py-2 rounded-md flex gap-2">
+                    <RiLiveLine className="text-3xl" />
+                    <span className="mt-1">Live</span>
+                  </button>
+                </a>
+              </div>
             </div>
-            <div className="basis-1/3 flex-1 ">
-              <Image
-                src={cpdo}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="sample thumbnail"
-              />
+            <div className="relative basis-1/3 flex-1 group">
+              <div className="rounded-lg overflow-hidden group-hover:blur">
+                <Image
+                  src={cpdo}
+                  className="object-cover"
+                  width={"100%"}
+                  height={"100%"}
+                  layout="responsive"
+                  alt="wedding thumbnail"
+                />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 z-10 gap-2">
+                <a
+                  href="https://github.com/chanrefuerzo/website"
+                  target="_blank"
+                >
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500  text-white px-4 py-2 rounded-md flex gap-2">
+                    <FiGithub className="text-3xl" />
+                    <span className="mt-1">GitHub</span>
+                  </button>
+                </a>
+                <a href="https://cpdo-website.vercel.app/" target="_blank">
+                  <button className="bg-gradient-to-r from-cyan-500 to-teal-500  text-white px-4 py-2 rounded-md flex gap-2">
+                    <RiLiveLine className="text-3xl" />
+                    <span className="mt-1">Live</span>
+                  </button>
+                </a>
+              </div>
             </div>
             <div className="basis-1/3 flex-1 ">
               <Image
